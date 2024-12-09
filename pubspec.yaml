@@ -62,6 +62,9 @@ flutter_icons:
   ios: true
   image_path: "assets/img/logo.png"
   adaptive_icon_background: "assets/img/Logoapp.png"
+
+
+
 flutter:
 
   # The following line ensures that the Material Icons font is

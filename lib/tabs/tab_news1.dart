@@ -138,7 +138,7 @@ class _TabNews1State extends State<TabNews1> {
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(10),
                           child: Image.asset(
-                            "assets/img/News3.jpg",
+                            "assets/img/News1.png",
                             fit: BoxFit.cover,
                           ),
                         ),
