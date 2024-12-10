@@ -118,13 +118,13 @@ class _Screen1State extends State<Screen1> {
                   ),
                 ],
               ),
-              const Expanded(
+              Expanded(
                 child: TabBarView(
                   children: [
-                    Center(child: Text("Page 1: POPULAR")),
-                    Tab1(),
-                    Center(child: Text("Page 3: VEGETABLES")),
-                    Center(child: Text("Page 4: Flash Side")),
+                    const Center(child: Text("Page 1: POPULAR")),
+                    Tab1(onNavigate: _onItemTapped),
+                    const Center(child: Text("Page 3: VEGETABLES")),
+                    const Center(child: Text("Page 4: Flash Side")),
                   ],
                 ),
               ),

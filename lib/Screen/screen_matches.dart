@@ -16,6 +16,16 @@ class ScreenMatches extends StatefulWidget {
 }
 
 class _ScreenMatchesState extends State<ScreenMatches> {
+  // Variable d'état pour suivre l'index sélectionné dans BottomNavigationBar
+  int _selectedIndex = 0;
+
+  // Fonction pour changer l'index sélectionné et naviguer vers les pages correspondantes
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index; // Met à jour l'index sélectionné
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -50,7 +60,7 @@ class _ScreenMatchesState extends State<ScreenMatches> {
                       },
                       child: CircleAvatar(
                         radius: 25,
-                        backgroundColor: Colors.white10,
+                        backgroundColor: const Color(0xff3e2c8d),
                         child: Icon(Icons.arrow_back, color: Colors.white),
                       ),
                     ),
@@ -59,14 +69,14 @@ class _ScreenMatchesState extends State<ScreenMatches> {
                       children: [
                         CircleAvatar(
                           radius: 25,
-                          backgroundColor: Colors.white10,
+                          backgroundColor: const Color(0xff3e2c8d),
                           child: Icon(IconsaxPlusLinear.export,
                               color: Colors.white),
                         ),
                         SizedBox(width: 10),
                         CircleAvatar(
                           radius: 25,
-                          backgroundColor: Colors.white10,
+                          backgroundColor: const Color(0xff3e2c8d),
                           child:
                               Icon(IconsaxPlusLinear.more, color: Colors.white),
                         ),

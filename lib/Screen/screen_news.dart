@@ -2,6 +2,7 @@ import 'package:buttons_tabbar/buttons_tabbar.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:iconsax_plus/iconsax_plus.dart';
+import 'package:live_score_football_app/Screen/screen_news_detail.dart';
 import 'package:live_score_football_app/tabs/tab_news1.dart';
 
 class ScreenNews extends StatefulWidget {
@@ -56,7 +57,7 @@ class _ScreenNewsState extends State<ScreenNews> {
                 ],
               ),
             ),
-            const SizedBox(height: 10),
+            const SizedBox(height: 5),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(
@@ -115,18 +116,36 @@ class _ScreenNewsState extends State<ScreenNews> {
                     const SizedBox(height: 5),
                     Padding(
                       padding: const EdgeInsets.only(left: 8.0, right: 8.0),
-                      child: Container(
-                        height: 200,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20),
-                        ),
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(10),
-                          child: Image.asset(
-                            'assets/img/News2.png',
-                            height: 200,
-                            width: 600,
-                            fit: BoxFit.cover,
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => NewsDetailPage(
+                                title:
+                                    "Bayern Munich Defeats Dortmund in a Classic Bunderliga Clash",
+                                description:
+                                    "In a thrilling Bundesliga encounter, Bayern Munich triumphed over Borussia Dortmund in one of the league’s most anticipated matchups. The fierce rivalry between these two German giants lived up to expectations, with both teams displaying high intensity and determination from the first whistle.\n\nBayern Munich’s clinical finishing and solid team play proved decisive, as they managed to secure a crucial victory that keeps them at the top of the standings. Dortmund fought valiantly but struggled to break down Bayern’s defense, leaving them to reflect on missed opportunities.\nThis classic clash showcased the fierce competitive spirit of the Bundesliga, reminding fans why these matches are among the most exciting in European football.\nWith the win, Bayern not only extended their lead but also demonstrated their resilience in a season that promises to be filled with intense competition.\n\nDortmund, despite the loss, showed moments of brilliance, particularly in the second half, where they pushed Bayern to the limit. However, the defending champions' experience and tactical discipline were key in securing the three points.\nThe match will undoubtedly be remembered as another chapter in the storied rivalry between these two clubs, and both teams will look to build on the performance as they head into the remainder of the season.",
+                                imageUrl: "assets/img/News2.png",
+                                date: "45 Minutes Ago",
+                                source: "MatchHighlights",
+                              ),
+                            ),
+                          );
+                        },
+                        child: Container(
+                          height: 200,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(10),
+                            child: Image.asset(
+                              'assets/img/News2.png',
+                              height: 200,
+                              width: 600,
+                              fit: BoxFit.cover,
+                            ),
                           ),
                         ),
                       ),

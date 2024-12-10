@@ -33,7 +33,7 @@ class _TabNewsMatchesState extends State<TabNewsMatches> {
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(10),
                           child: Image.asset(
-                            "assets/img/News3.jpg",
+                            "assets/img/News2.png",
                             fit: BoxFit.cover,
                           ),
                         ),
@@ -138,7 +138,7 @@ class _TabNewsMatchesState extends State<TabNewsMatches> {
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(10),
                           child: Image.asset(
-                            "assets/img/News2.jpg",
+                            "assets/img/News1.png",
                             fit: BoxFit.cover,
                           ),
                         ),

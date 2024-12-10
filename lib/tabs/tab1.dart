@@ -3,7 +3,9 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:iconsax_plus/iconsax_plus.dart';
 
 class Tab1 extends StatefulWidget {
-  const Tab1({super.key});
+  final Function(int) onNavigate;
+
+  const Tab1({super.key, required this.onNavigate});
 
   @override
   State<Tab1> createState() => _Tab1State();
@@ -59,141 +61,151 @@ class _Tab1State extends State<Tab1> {
                 const SizedBox(height: 0),
                 Padding(
                   padding: const EdgeInsets.only(left: 2, right: 2, top: 15),
-                  child: Container(
-                      height: 220,
-                      width: 385,
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(15),
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: ListView(
-                          children: [
-                            Row(
-                              children: [
-                                Text("Barcelona vs Real Madrid (El Clásico)",
-                                    style: GoogleFonts.roboto(
-                                        textStyle: const TextStyle(
-                                      color: Color(0xff422f96),
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w800,
-                                      letterSpacing: 0,
-                                    ))),
-                                Spacer(),
-                                Container(
-                                  alignment: Alignment.center,
-                                  height: 23,
-                                  width: 50,
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(100),
-                                    color: Color(0xfff3f2f9),
-                                  ),
-                                  child: Text(
-                                    '32:54',
-                                    style: GoogleFonts.roboto(
-                                        textStyle: const TextStyle(
-                                      color: Color(0xff422f96),
-                                      fontSize: 12,
-                                      letterSpacing: 0,
-                                    )),
-                                  ),
-                                ),
-                              ],
-                            ),
-                            SizedBox(height: 18),
-                            Row(
-                              children: [
-                                Column(
-                                  children: [
-                                    CircleAvatar(
-                                      radius: 40,
-                                      backgroundColor: Color(0xfff8f8fa),
-                                      child: Image.asset(
-                                        'assets/img/Logo_Real_Madrid.svg.png',
-                                        height: 45,
-                                        width: 45,
-                                      ),
-                                    ),
-                                    Text('Real Madrid',
-                                        style: GoogleFonts.roboto(
-                                            textStyle: const TextStyle(
-                                          color: Colors.black,
-                                          fontSize: 15,
-                                          fontWeight: FontWeight.w400,
-                                        )))
-                                  ],
-                                ),
-                                Spacer(),
-                                Column(
-                                  children: [
-                                    Text('0 - 0',
-                                        style: GoogleFonts.roboto(
-                                            textStyle: const TextStyle(
-                                          color: Color(0xff422f96),
-                                          fontSize: 35,
-                                          fontWeight: FontWeight.w400,
-                                        ))),
-                                    Container(
-                                      height: 20,
-                                      width: 90,
-                                      decoration: BoxDecoration(
-                                        borderRadius:
-                                            BorderRadius.circular(100),
-                                        color: Color(0xfff3f2f9),
-                                      ),
-                                      child: Center(
-                                        child: Text('1st Half Match',
-                                            style: GoogleFonts.roboto(
-                                                textStyle: const TextStyle(
-                                              color: Color(0xff422f96),
-                                              fontSize: 10,
-                                            ))),
-                                      ),
-                                    )
-                                  ],
-                                ),
-                                const Spacer(),
-                                Column(
-                                  children: [
-                                    CircleAvatar(
-                                      radius: 40,
-                                      backgroundColor: Color(0xfff8f8fa),
-                                      child: Image.asset(
-                                        'assets/img/Logo_FC_Barcelona.svg.png',
-                                        height: 45,
-                                        width: 45,
-                                      ),
-                                    ),
-                                    Text('Barcelona',
-                                        style: GoogleFonts.roboto(
-                                            textStyle: const TextStyle(
-                                          color: Colors.black,
-                                          fontSize: 15,
-                                          fontWeight: FontWeight.w400,
-                                        )))
-                                  ],
-                                ),
-                              ],
-                            ),
-                            const SizedBox(height: 20),
-                            Container(
-                                alignment: Alignment.center,
-                                height: 40,
-                                width: 379,
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(10),
-                                  color: Color(0xff422f96),
-                                ),
-                                child: Text('Watch Live',
-                                    style: GoogleFonts.roboto(
-                                        textStyle: const TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 16,
-                                    ))))
-                          ],
+                  child: GestureDetector(
+                    onTap: () {
+                      widget.onNavigate(1);
+                    },
+                    child: Container(
+                        height: 220,
+                        width: 385,
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(15),
                         ),
-                      )),
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: ListView(
+                            children: [
+                              Row(
+                                children: [
+                                  Text("Barcelona vs Real Madrid (El Clásico)",
+                                      style: GoogleFonts.roboto(
+                                          textStyle: const TextStyle(
+                                        color: Color(0xff422f96),
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.w800,
+                                        letterSpacing: 0,
+                                      ))),
+                                  Spacer(),
+                                  Container(
+                                    alignment: Alignment.center,
+                                    height: 23,
+                                    width: 50,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(100),
+                                      color: Color(0xfff3f2f9),
+                                    ),
+                                    child: Text(
+                                      '32:54',
+                                      style: GoogleFonts.roboto(
+                                          textStyle: const TextStyle(
+                                        color: Color(0xff422f96),
+                                        fontSize: 12,
+                                        letterSpacing: 0,
+                                      )),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              SizedBox(height: 18),
+                              Row(
+                                children: [
+                                  Column(
+                                    children: [
+                                      CircleAvatar(
+                                        radius: 40,
+                                        backgroundColor: Color(0xfff8f8fa),
+                                        child: Image.asset(
+                                          'assets/img/Logo_Real_Madrid.svg.png',
+                                          height: 45,
+                                          width: 45,
+                                        ),
+                                      ),
+                                      Text('Real Madrid',
+                                          style: GoogleFonts.roboto(
+                                              textStyle: const TextStyle(
+                                            color: Colors.black,
+                                            fontSize: 15,
+                                            fontWeight: FontWeight.w400,
+                                          )))
+                                    ],
+                                  ),
+                                  Spacer(),
+                                  Column(
+                                    children: [
+                                      Text('0 - 0',
+                                          style: GoogleFonts.roboto(
+                                              textStyle: const TextStyle(
+                                            color: Color(0xff422f96),
+                                            fontSize: 35,
+                                            fontWeight: FontWeight.w400,
+                                          ))),
+                                      Container(
+                                        height: 20,
+                                        width: 90,
+                                        decoration: BoxDecoration(
+                                          borderRadius:
+                                              BorderRadius.circular(100),
+                                          color: Color(0xfff3f2f9),
+                                        ),
+                                        child: Center(
+                                          child: Text('1st Half Match',
+                                              style: GoogleFonts.roboto(
+                                                  textStyle: const TextStyle(
+                                                color: Color(0xff422f96),
+                                                fontSize: 10,
+                                              ))),
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                  const Spacer(),
+                                  Column(
+                                    children: [
+                                      CircleAvatar(
+                                        radius: 40,
+                                        backgroundColor: Color(0xfff8f8fa),
+                                        child: Image.asset(
+                                          'assets/img/Logo_FC_Barcelona.svg.png',
+                                          height: 45,
+                                          width: 45,
+                                        ),
+                                      ),
+                                      Text('Barcelona',
+                                          style: GoogleFonts.roboto(
+                                              textStyle: const TextStyle(
+                                            color: Colors.black,
+                                            fontSize: 15,
+                                            fontWeight: FontWeight.w400,
+                                          )))
+                                    ],
+                                  ),
+                                ],
+                              ),
+                              const SizedBox(height: 20),
+                              GestureDetector(
+                                onTap: () {
+                                  widget.onNavigate(2);
+                                },
+                                child: Container(
+                                    alignment: Alignment.center,
+                                    height: 40,
+                                    width: 379,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(10),
+                                      color: Color(0xff422f96),
+                                    ),
+                                    child: Text('Watch Live',
+                                        style: GoogleFonts.roboto(
+                                            textStyle: const TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 16,
+                                        )))),
+                              )
+                            ],
+                          ),
+                        )),
+                  ),
                 ),
               ],
             ),
