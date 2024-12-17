@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:iconsax_plus/iconsax_plus.dart';
-import 'package:live_score_football_app/Screen/screen1.dart';
-import 'package:live_score_football_app/Screen/screen_news.dart';
 import 'package:live_score_football_app/tabs/tab_news_matches.dart';
 import 'package:live_score_football_app/tabs/tab_standings.dart';
 
@@ -16,13 +14,13 @@ class ScreenMatches extends StatefulWidget {
 }
 
 class _ScreenMatchesState extends State<ScreenMatches> {
-  // Variable d'état pour suivre l'index sélectionné dans BottomNavigationBar
+  // ignore: unused_field
   int _selectedIndex = 0;
 
-  // Fonction pour changer l'index sélectionné et naviguer vers les pages correspondantes
+  // ignore: unused_element
   void _onItemTapped(int index) {
     setState(() {
-      _selectedIndex = index; // Met à jour l'index sélectionné
+      _selectedIndex = index;
     });
   }
 
@@ -58,9 +56,9 @@ class _ScreenMatchesState extends State<ScreenMatches> {
                       onTap: () {
                         widget.onNavigate(0);
                       },
-                      child: CircleAvatar(
+                      child: const CircleAvatar(
                         radius: 25,
-                        backgroundColor: const Color(0xff3e2c8d),
+                        backgroundColor: Color(0xff3e2c8d),
                         child: Icon(Icons.arrow_back, color: Colors.white),
                       ),
                     ),
@@ -69,14 +67,14 @@ class _ScreenMatchesState extends State<ScreenMatches> {
                       children: [
                         CircleAvatar(
                           radius: 25,
-                          backgroundColor: const Color(0xff3e2c8d),
+                          backgroundColor: Color(0xff3e2c8d),
                           child: Icon(IconsaxPlusLinear.export,
                               color: Colors.white),
                         ),
                         SizedBox(width: 10),
                         CircleAvatar(
                           radius: 25,
-                          backgroundColor: const Color(0xff3e2c8d),
+                          backgroundColor: Color(0xff3e2c8d),
                           child:
                               Icon(IconsaxPlusLinear.more, color: Colors.white),
                         ),
@@ -99,7 +97,7 @@ class _ScreenMatchesState extends State<ScreenMatches> {
                               width: 55,
                             ),
                           ),
-                          SizedBox(height: 15),
+                          const SizedBox(height: 15),
                           Text('Real Madrid',
                               style: GoogleFonts.roboto(
                                   textStyle: const TextStyle(
@@ -121,7 +119,7 @@ class _ScreenMatchesState extends State<ScreenMatches> {
                                     fontSize: 45,
                                     fontWeight: FontWeight.w400,
                                   ))),
-                              SizedBox(width: 10),
+                              const SizedBox(width: 10),
                               Container(
                                 alignment: Alignment.center,
                                 height: 30,
@@ -140,7 +138,7 @@ class _ScreenMatchesState extends State<ScreenMatches> {
                                   )),
                                 ),
                               ),
-                              SizedBox(width: 10),
+                              const SizedBox(width: 10),
                               Text('2',
                                   style: GoogleFonts.roboto(
                                       textStyle: const TextStyle(
@@ -227,11 +225,11 @@ class _ScreenMatchesState extends State<ScreenMatches> {
             const Flexible(
               child: TabBarView(
                 children: [
-                  Center(child: Text("Page 1: POPULAR")),
+                  Center(child: Text("Details")),
                   TabStandings(),
                   TabNewsMatches(),
-                  Center(child: Text("Page 4: Flash Side")),
-                  Center(child: Text("Page 4: Flash Side")),
+                  Center(child: Text("Season")),
+                  Center(child: Text("Statistics")),
                 ],
               ),
             ),

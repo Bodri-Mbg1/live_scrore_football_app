@@ -520,7 +520,7 @@ class _Tab1State extends State<Tab1> {
         Padding(
           padding: const EdgeInsets.only(left: 8, right: 8),
           child: Container(
-            height: 300,
+            height: 700,
             width: double.infinity,
             decoration: BoxDecoration(
               color: Colors.white,
@@ -562,261 +562,162 @@ class _Tab1State extends State<Tab1> {
                   ),
                 ),
                 const Divider(),
-                Padding(
-                  padding: const EdgeInsets.only(left: 10, right: 10),
-                  child: Container(
-                    alignment: Alignment.center,
-                    height: 110,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      color: const Color(0xfff3f2f9),
-                    ),
-                    child: Stack(
+                Container(
+                  height: 160,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Row(
                       children: [
-                        Positioned(
-                          bottom: -160,
-                          top: 10,
-                          left: 80,
-                          child: Opacity(
-                            opacity: 0.1,
+                        Container(
+                          height: 150,
+                          width: 150,
+                          decoration: BoxDecoration(color: Colors.transparent),
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(10),
                             child: Image.asset(
-                              'assets/img/premier-league-5.png',
-                              width: 190,
-                              height: 190,
+                              "assets/img/News2.png",
                               fit: BoxFit.cover,
                             ),
                           ),
                         ),
-                        Padding(
-                          padding: const EdgeInsets.only(
-                              left: 20, right: 20, top: 5),
-                          child: Row(
-                            children: [
-                              Column(
-                                children: [
-                                  CircleAvatar(
-                                    radius: 30,
-                                    backgroundColor: Colors.white,
-                                    child: Image.asset(
-                                      'assets/img/Logo_Chelsea.svg.png',
-                                      height: 45,
-                                      width: 45,
-                                    ),
-                                  ),
-                                  const SizedBox(height: 10),
-                                  Text('Chelsea',
-                                      textAlign: TextAlign.center,
-                                      style: GoogleFonts.roboto(
-                                          textStyle: const TextStyle(
-                                        color: Colors.black,
-                                        fontSize: 13,
-                                        fontWeight: FontWeight.w400,
-                                        height: 0.9,
-                                      )))
-                                ],
-                              ),
-                              const Spacer(),
-                              Column(
-                                children: [
-                                  const SizedBox(height: 10),
-                                  Text('01:00 AM',
-                                      style: GoogleFonts.roboto(
-                                          textStyle: const TextStyle(
-                                        color: Colors.black,
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.w500,
-                                        letterSpacing: -1,
-                                      ))),
-                                  Container(
-                                    alignment: Alignment.center,
-                                    height: 30,
-                                    width: 120,
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(100),
-                                      color: Colors.white,
-                                    ),
-                                    child: Center(
-                                      child: Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        children: [
-                                          const Icon(
-                                            IconsaxPlusBold.notification,
-                                            size: 20,
-                                            color: Color(0xff422f96),
-                                          ),
-                                          SizedBox(width: 5),
-                                          Text('Reminder',
-                                              style: GoogleFonts.roboto(
-                                                  textStyle: const TextStyle(
-                                                color: Color(0xff422f96),
-                                                fontSize: 15,
-                                              ))),
-                                        ],
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              Spacer(),
-                              Column(
-                                children: [
-                                  CircleAvatar(
-                                    radius: 30,
-                                    backgroundColor: Colors.white,
-                                    child: Image.asset(
-                                      'assets/img/Arsenal_FC.svg.png',
-                                      height: 45,
-                                      width: 45,
-                                    ),
-                                  ),
-                                  SizedBox(height: 10),
-                                  Text('Arsenal',
-                                      textAlign: TextAlign.center,
-                                      style: GoogleFonts.roboto(
-                                          textStyle: const TextStyle(
-                                        color: Colors.black,
-                                        fontSize: 13,
-                                        fontWeight: FontWeight.w400,
-                                        height: 0.9,
-                                      )))
-                                ],
-                              ),
-                            ],
-                          ),
-                        ),
+                        const Spacer(),
+                        const Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text('MatchHighlights',
+                                style: TextStyle(
+                                    fontSize: 14, color: Colors.grey)),
+                            SizedBox(height: 10),
+                            Text(
+                                "North London Derby: Arsenal\nTriumphs Over Tottenham",
+                                style: TextStyle(
+                                    fontSize: 17,
+                                    fontWeight: FontWeight.w900,
+                                    color: Color(0xff422f96),
+                                    height: 1.1,
+                                    letterSpacing: 0)),
+                            SizedBox(height: 7),
+                            Text(
+                              "Arsenal emerged victorious in an...",
+                              style: TextStyle(color: Colors.grey),
+                            ),
+                            SizedBox(height: 27),
+                            Text('45 Minutes Ago',
+                                style: TextStyle(color: Colors.black26))
+                          ],
+                        )
                       ],
                     ),
                   ),
                 ),
-                SizedBox(height: 10),
-                Padding(
-                  padding: const EdgeInsets.only(left: 10, right: 10),
-                  child: Container(
-                    alignment: Alignment.center,
-                    height: 110,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      color: Color(0xfff3f2f9),
-                    ),
-                    child: Stack(
+                Container(
+                  height: 160,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Row(
                       children: [
-                        Positioned(
-                          bottom: -160,
-                          top: 10,
-                          left: 80,
-                          child: Opacity(
-                            opacity: 0.1,
+                        Container(
+                          height: 150,
+                          width: 150,
+                          decoration: BoxDecoration(color: Colors.transparent),
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(10),
                             child: Image.asset(
-                              'assets/img/premier-league-5.png',
-                              width: 190,
-                              height: 190,
+                              "assets/img/News1.png",
                               fit: BoxFit.cover,
                             ),
                           ),
                         ),
-                        Padding(
-                          padding: const EdgeInsets.only(
-                              left: 20, right: 20, top: 5),
-                          child: Row(
-                            children: [
-                              Column(
-                                children: [
-                                  CircleAvatar(
-                                    radius: 30,
-                                    backgroundColor: Colors.white,
-                                    child: Image.asset(
-                                      'assets/img/Manchester_United_FC_crest.svg.png',
-                                      height: 45,
-                                      width: 45,
-                                    ),
-                                  ),
-                                  SizedBox(height: 10),
-                                  Text('Manchester\nUnited',
-                                      textAlign: TextAlign.center,
-                                      style: GoogleFonts.roboto(
-                                          textStyle: const TextStyle(
-                                        color: Colors.black,
-                                        fontSize: 13,
-                                        fontWeight: FontWeight.w400,
-                                        height: 0.9,
-                                      )))
-                                ],
-                              ),
-                              Spacer(),
-                              Column(
-                                children: [
-                                  SizedBox(height: 10),
-                                  Text('11:00 AM',
-                                      style: GoogleFonts.roboto(
-                                          textStyle: const TextStyle(
-                                        color: Colors.black,
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.w500,
-                                        letterSpacing: -1,
-                                      ))),
-                                  Container(
-                                    alignment: Alignment.center,
-                                    height: 30,
-                                    width: 120,
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(100),
-                                      color: Colors.white,
-                                    ),
-                                    child: Center(
-                                      child: Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        children: [
-                                          Icon(
-                                            IconsaxPlusBold.notification,
-                                            size: 20,
-                                            color: Color(0xff422f96),
-                                          ),
-                                          SizedBox(width: 5),
-                                          Text('Reminder',
-                                              style: GoogleFonts.roboto(
-                                                  textStyle: const TextStyle(
-                                                color: Color(0xff422f96),
-                                                fontSize: 15,
-                                              ))),
-                                        ],
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              Spacer(),
-                              Column(
-                                children: [
-                                  CircleAvatar(
-                                    radius: 30,
-                                    backgroundColor: Colors.white,
-                                    child: Image.asset(
-                                      'assets/img/Tottenham_Hotspur.svg.png',
-                                      height: 45,
-                                      width: 45,
-                                    ),
-                                  ),
-                                  SizedBox(height: 10),
-                                  Text('Tottenham\nHotspur',
-                                      textAlign: TextAlign.center,
-                                      style: GoogleFonts.roboto(
-                                          textStyle: const TextStyle(
-                                        color: Colors.black,
-                                        fontSize: 13,
-                                        fontWeight: FontWeight.w400,
-                                        height: 0.9,
-                                      )))
-                                ],
-                              ),
-                            ],
-                          ),
-                        ),
+                        const Spacer(),
+                        const Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text('MatchHighlights',
+                                style: TextStyle(
+                                    fontSize: 14, color: Colors.grey)),
+                            SizedBox(height: 10),
+                            Text(
+                                "North London Derby: Arsenal\nTriumphs Over Tottenham",
+                                style: TextStyle(
+                                    fontSize: 17,
+                                    fontWeight: FontWeight.w900,
+                                    color: Color(0xff422f96),
+                                    height: 1.1,
+                                    letterSpacing: 0)),
+                            SizedBox(height: 7),
+                            Text(
+                              "Arsenal emerged victorious in an...",
+                              style: TextStyle(color: Colors.grey),
+                            ),
+                            SizedBox(height: 27),
+                            Text('45 Minutes Ago',
+                                style: TextStyle(color: Colors.black26))
+                          ],
+                        )
                       ],
                     ),
                   ),
-                )
+                ),
+                Container(
+                  height: 160,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Row(
+                      children: [
+                        Container(
+                          height: 150,
+                          width: 150,
+                          decoration: BoxDecoration(color: Colors.transparent),
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(10),
+                            child: Image.asset(
+                              "assets/img/News3.jpg",
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                        ),
+                        const Spacer(),
+                        const Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text('MatchHighlights',
+                                style: TextStyle(
+                                    fontSize: 14, color: Colors.grey)),
+                            SizedBox(height: 10),
+                            Text(
+                                "North London Derby: Arsenal\nTriumphs Over Tottenham",
+                                style: TextStyle(
+                                    fontSize: 17,
+                                    fontWeight: FontWeight.w900,
+                                    color: Color(0xff422f96),
+                                    height: 1.1,
+                                    letterSpacing: 0)),
+                            SizedBox(height: 7),
+                            Text(
+                              "Arsenal emerged victorious in an...",
+                              style: TextStyle(color: Colors.grey),
+                            ),
+                            SizedBox(height: 27),
+                            Text('45 Minutes Ago',
+                                style: TextStyle(color: Colors.black26))
+                          ],
+                        )
+                      ],
+                    ),
+                  ),
+                ),
               ],
             ),
           ),
